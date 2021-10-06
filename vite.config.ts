@@ -4,6 +4,8 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base:
+    process.env.NODE_ENV === 'development' ? '/' : '/vite-react-pwa-practice/',
   plugins: [
     react(),
     VitePWA({
